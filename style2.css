@@ -28,18 +28,15 @@ input[type="number"] {
 	border: 0px solid #ccc;
 	border-radius: 4px;
 	text-align: center;
-	padding: 1px;
+	padding: 5px;
 	/* Add box-shadow on focus */
 	box-shadow: 0 0 0 2px rgba(0, 123, 255, 0.2);
 }
 
-
-
-/* Style the up and down arrows */
 input[type="number"]::-webkit-inner-spin-button,
 input[type="number"]::-webkit-outer-spin-button {
-	-webkit-appearance: none;
-	margin: 0;
+  -webkit-appearance: none;
+  margin: 0;
 }
   
 /* Style the input on hover */
@@ -67,6 +64,7 @@ width: 100%;
 .module {
 	display: flex;
 	flex-direction: column;
+	flex-grow: 0;
 	justify-content: space-around;
 	background-color: #00CCC9;
 	border: 0px solid black;
@@ -74,7 +72,7 @@ width: 100%;
 	padding: 10px;
 	text-align: center;
 	min-height: 1fr;
-  max-height: 1fr;
+  	max-height: 1fr;
 	min-width: 1fr ;
 }
 
@@ -83,7 +81,6 @@ width: 100%;
 	background-color: #0ACC5B;
 	border: 0px solid black;
 	border-radius: 10px;
-	font-size: 28px;
 	color: #FFFFFF;
 	min-height: 40px;
 	text-align: center;
@@ -91,6 +88,7 @@ width: 100%;
 	text-decoration: none;
 	overflow: hidden;
 	cursor: pointer;
+	font-size: 2em;
 }
 
 .button:after {
@@ -115,11 +113,12 @@ width: 100%;
 
 
 .s2 {
-	background-color: #CC8814;
+	background-color: #F0A500;
 	color: white;
 	text-align: center;
 	text-decoration: none;
 	cursor: pointer;
+	font-size: 1.5em;
 }
 
 .github {
@@ -152,16 +151,34 @@ width: 100%;
 	margin-top: 0;
 }
 
+.container{
+	display: flex;
+	justify-content: space-evenly;
+
+}
+
+#mg{
+	font-weight:bold;
+}
+
+
 @media screen and (max-width: 768px) {
   #main-container {
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: repeat(6, 1fr);
   }
+  .container{
+	display: block;
+  }
+
 }
 
 @media screen and (max-width: 480px) {
   #main-container {
     grid-template-columns: repeat(1, 1fr);
     grid-template-rows: repeat(12, 1fr);
+  }
+  .container{
+	display: block;
   }
 }
